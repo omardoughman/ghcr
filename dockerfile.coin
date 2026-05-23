@@ -1,0 +1,16 @@
+FROM ubuntu:24.04
+
+LABEL language="Coin"
+LABEL compiler="CoinVM"
+
+WORKDIR /coin-app
+
+COPY . .
+
+RUN apt-get update && \
+    apt-get install -y python3 && \
+    mkdir -p build
+
+RUN echo "Coin runtime ready"
+
+CMD ["python3", "main.py"]
