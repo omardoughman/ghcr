@@ -1,0 +1,14 @@
+COIN_BINARY_v1
+==============
+
+SECTION .text
+LOAD_CONST "Hello from Coin!"
+PRINT
+
+LOAD_INT 128
+STORE coins
+
+LOAD_VAR coins
+PRINT
+
+HALT
